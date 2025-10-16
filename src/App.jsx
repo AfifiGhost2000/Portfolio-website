@@ -10,7 +10,7 @@ import Contact from './components/4-contact/Contact';
 import Footer from './components/5-footer/Footer';
 import About from './components/3a-about/About';
 import Articles from './components/3b-articles/Articles';
-import ArticleDetail from './components/3e-article_details/articleDetail';
+import ArticleDetail from './components/3e-article_details/ArticleDetail';
 
 import ScrollToTop from './utils/scrollToTop';
 
