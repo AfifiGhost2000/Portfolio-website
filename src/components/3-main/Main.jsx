@@ -23,7 +23,7 @@ export default function Main() {
 
             </div>
 
-            <div className="right-section">
+            <div className='right-section'>
                 <StayUpdated />
                 <WorkExperience />
 
