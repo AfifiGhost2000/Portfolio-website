@@ -1,0 +1,162 @@
+/* =======================
+table of contents
+==========================
+
+1. Left Section ==> Buttons
+2. Right Section ==> Cards
+3. Responsive Design ==> Media Query
+
+
+*/
+
+main.flex{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    gap: 2.64rem;
+    align-items: start;
+}
+
+
+/* ===========================
+    1. Left Section ==> Buttons
+============================== */
+main section.left-section.flex{
+    flex-direction: column;
+    gap: 10px;
+}
+    
+
+main section.left-section.flex button{
+    background-color: rgba(36,37,46,1);
+    width: 11rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+    opacity: 0.5;
+    border-radius: 5px;
+    transition: 0.3s;
+
+}
+
+main section.left-section.flex button:hover{
+    opacity: 1;
+
+}
+
+main section.left-section.flex button.active{
+    opacity: 1;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    padding: 0.8rem 0;
+    border: 1px solid var(--blue);
+
+
+}
+
+.light main section.left-section.flex button.active{
+
+    border: 1px solid #000;
+
+}
+
+
+
+/* ===========================
+    2. Right Section ==> Cards
+============================== */
+
+main section.right-section.flex{
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 16px; */
+    column-gap: 16px;
+    row-gap: 2rem;
+}
+.cardboard{
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(93, 188, 252, 0.3);
+    border-radius: 5px;
+    transition: 0.3s;
+    background-image: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0.05)); 
+}
+
+
+.cardboard:hover{
+    border: 1px solid var(--blue);
+    rotate: 1deg;
+    scale: 1.01;
+    cursor: pointer; 
+}
+
+.light .cardboard, .light .cardboard:hover{
+    border: none;
+}
+
+
+.cardboard img {
+    border-radius: 5px;
+    
+}
+.cardboard .box{
+    padding: 1rem 0.4rem;
+}
+.cardboard .box .title{
+    color: var(--title);
+    text-align: left;
+    text-transform: capitalize;
+}
+.cardboard .box .sub-title{
+    color: var(--subtitle);
+    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.1rem;
+}
+
+.cardboard .box .icons{
+    justify-content: space-between;
+}
+
+.cardboard .icon-github, .cardboard .icon-link{
+    font-size: 1.2rem;
+    color: var(--subtitle);
+}
+
+.cardboard .icon-github:hover, .cardboard .icon-link:hover{
+    font-size: 1.25rem;
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
+.cardboard a.link{
+    font-size: 0.9rem;
+    color: var(--blue);
+    margin-right: 12px;
+}
+
+/* ===========================
+    3. Responsive Design ==> Media Query
+============================== */
+
+@media(max-width:700px) {
+    main.flex{
+        flex-direction: column;
+        gap: 2064rem;
+        align-items: center;
+    }
+    main section.left-section.flex{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+main section.left-section.flex button{
+    width: 7rem;
+    padding: 0.8rem 0;
+    font-size: 0.9rem;
+
+}
+}

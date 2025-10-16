@@ -1,0 +1,135 @@
+/* =======================
+table of contents
+==========================
+
+1. Left Section
+2. Right Section === animation
+3. Responsive Design
+
+*/
+
+section.hero {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ===========================
+    1. Left Section
+============================== */
+section.hero .left-section {
+    flex: 3;
+    max-width: 70%;
+}
+
+section.hero .parent-avatar.flex {
+    align-items: end;
+    gap: 0.6rem;
+    min-height: 88px;
+}
+
+section.hero .icon-verified {
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+section.hero .avatar {
+    width: 88px;
+    border-radius: 50%;
+    border: 1px solid darkorange;
+    padding: 1px;
+    box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+}
+
+section.hero h1.title {
+    font-size: 2.85rem;
+    line-height: 3.3rem;
+    margin: 24px 0;
+    color: var(--title);
+    text-align: left;
+}
+
+section.hero p.subtitle {
+    color: var(--subtitle);
+    font-size: 0.9rem;
+    line-height: 1.65rem;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+section.hero p.description {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.005em;
+    line-height: 1.65rem;
+}
+
+section.hero .all-icons {
+    margin-top: 16px;
+    font-size: 1.3rem;
+    gap: 1.5rem;
+    color: var(--subtitle);
+}
+
+section.hero .icon:hover {
+    font-size: 1.4rem;
+    transition: 0.3s;
+    cursor: pointer;
+    color: var(--icon-hover);
+}
+
+/* ===========================
+    2. Right Section === animation
+============================== */
+section.hero .right-section {
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+section.hero .right-section .animation {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.hero .right-section .dev-animation {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ===========================
+    3. Responsive Design
+============================== */
+@media (max-width: 1250px) {
+    section.hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section.hero .left-section {
+        max-width: 100%;
+    }
+
+    section.hero .right-section {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    section.hero .right-section .animation {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    section.hero h1.title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
